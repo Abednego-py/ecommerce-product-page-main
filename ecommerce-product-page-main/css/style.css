@@ -1,0 +1,413 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body  {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.container {
+    margin: 30px 200px;
+    max-width: 1300px;
+    height: 100vh;
+    margin-bottom: 40px;
+}
+nav {
+    display: flex;
+    margin-bottom: 20px;
+}
+.hr-main {
+    margin-bottom: 90px;
+    background-color: hsl(219, 9%, 45%);
+    height: 2px;
+}
+.image-top {
+    position: relative;
+    right: 0;
+    left: 40px;
+}
+.image-top img {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.image-top p {
+    border-radius: 20px;
+    background-color: hsl(26, 100%, 55%);
+    width: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 39px;
+    left: 12px;
+    color: #fff;
+    font-size: small;
+}
+.avatar {
+    border: 2px solid black;
+    border-color: hsl(26, 100%, 55%);
+}
+svg {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+nav li {
+    display: inline-block;
+    margin-left: 1.2em;
+}
+nav li:hover {
+    padding-bottom: 12px;
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+}
+a {
+    color: hsl(220, 14%, 75%);
+}
+
+ul {
+    margin:0 auto;
+    margin-left: 15px;
+}
+#list-group {
+    display: none;
+}
+
+/*** main styles ***/
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 2.5rem;
+}
+.col-6 {
+    flex: 1;
+    height: 60vh;
+}
+.col-6 h3 {
+    color: hsl(26, 100%, 55%);
+}
+.row-2 {
+    display: flex;
+    justify-content: space-between;
+}
+.row-2 .click {
+    margin-top: 17px;
+    cursor: pointer;
+}
+.row-2 button {
+    width: 230px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.btn {
+    color: #fff;
+    background-color: hsl(26, 100%, 55%);
+    outline: none;
+    cursor: pointer;
+}
+.btn:hover {
+    color: hsl(25, 100%, 94%);
+}
+ button img {
+     color: #fff;
+     padding-right: 20px;
+ }
+
+p {
+    color: hsl(220, 14%, 75%);
+}
+img {
+    border-radius: 20px;
+}
+.row .col-3 {
+    flex: 1;
+}
+.row-num {
+    display: flex;
+    gap: 30px;
+}
+.row-num p {
+    background-color: hsl(25, 100%, 94%);
+    width: 50px;
+    text-align: center;
+    color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+}
+.col-6 span {
+    text-decoration:line-through;
+    color: hsl(220, 14%, 75%);;
+}
+.row-thumb {
+    display: flex;
+    justify-content:space-around;
+}
+.row-thumb .col-3 {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row-thumb img:hover {
+    border: 2px solid black;
+    border-color: hsl(26, 100%, 55%);
+    background-color: rgba(255, 163, 26, 0.966);
+    cursor: pointer;
+} 
+.cart-info {
+    width: 350px;
+    height: 200px;
+    border:  none;
+    position: absolute;
+    z-index: 1;
+    left: 70%;
+    top: 110px;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 4px 2px 0 grey;
+}
+.cart-info button {
+    width: 80%;
+    margin: 0 auto;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+}
+.product-info {
+    margin: 2px;
+    margin-left: 10px;
+}
+.product_info2 {
+    display: flex;
+}
+.product_info2 i {
+    color: grey;
+    margin-left: 5px;
+}
+.product_info2 svg {
+    position: relative;
+    left: 90px;
+}
+.product_info2 p {
+    margin-left: 5px;
+}
+.cart-info img {
+    width:70px;
+    height: 70px;
+}
+.cart-info h3 {
+    text-align: left;
+    margin-left: 2rem;
+    color: black;
+}
+.show {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  .menu {
+      display: none;
+  }
+
+  /* The Modal (background) */
+.modal {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    z-index: 2;
+    padding-top: 100px;
+    max-width: 300px;
+    max-height: 200px;
+    overflow: auto;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    max-height: 200px;
+  }
+  .thumb-row {
+      display: flex;
+      width: 90%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+    width: 100%;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @media screen and (max-width : 768px){
+     ul {
+         display: none;
+     } 
+     .menu {
+         display: block;
+     }
+    .container {
+        max-width: 760px;
+        margin: 30px;
+        height: 100vh;
+    }
+    nav svg {
+        margin: 0 30px;
+    }
+    .image-top {
+        position: absolute;
+        left: 80%;
+    }
+    .row-thumb .col-3 {
+        display: none;
+    }
+    .row {
+        display: block;
+        width: 100%;
+    }
+    .mainImg {
+        width: 100%;
+        height: 300px;
+    }
+    .cart-info {
+        width: 90%;
+        height: 40vh;
+        border:  2px solid grey;
+        position: absolute;
+        z-index: 1;
+        left: 5%;
+        background-color: #fff;
+        top: 15%;
+        /* display: none; */
+        box-shadow: 0 4px 2px 0 grey;
+    }
+    .row-2 {
+        display: block;
+    }
+    .row-2 .click, .number {
+        display: inline;
+       margin: 10px 70px;
+    }
+    .btn {
+        display: block;
+        margin: 10px 20px;
+    }
+    .row-2 button {
+        width: 90%;
+    }
+    .row-num, span {
+        display: inline-flex;
+        margin: 10px auto;
+
+        
+    }
+    .row-num h2 {
+        margin: 0 1em;
+    }
+    .row-num p {
+        margin: 0 3em;
+    }
+    .col-6 span {
+        margin-left: 5em;
+    }
+    #cart-row {
+        display: flex;
+    }
+    #cart-row img{
+        position: relative;
+        left: -50px;
+        margin: 20px;
+    }
+    .cart-info button {
+        position: relative;
+        top: 10px;
+    }
+
+  }
