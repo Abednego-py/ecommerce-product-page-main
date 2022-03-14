@@ -67,7 +67,7 @@ ul {
     margin:0 auto;
     margin-left: 15px;
 }
-#list-group {
+#myTopnav {
     display: none;
 }
 
@@ -325,11 +325,42 @@ img {
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+  .top-nav {
+      display: none;
+  }
+  #previous, #next {
+      display: none;
+  }
+  /* .item-cont {
+      background-color: #999;
+      padding: 10px;
+      display: flex;
+  } */
 
   @media screen and (max-width : 768px){
-     ul {
+    #previous, #next {
+        display: block;
+    }
+    #previous {
+        position: absolute;
+        top: 290px;
+        left: 50px;
+        background: #fff;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #next {
+        position: absolute;
+        background: #fff;
+        padding: 10px;
+        cursor: pointer;
+        right: 40px;
+        top: 290px;
+    }
+    
+     .sides {
          display: none;
-     } 
+     }
      .menu {
          display: block;
      }
@@ -352,9 +383,15 @@ img {
         display: block;
         width: 100%;
     }
-    .mainImg {
+    img.mainImg {
         width: 100%;
         height: 300px;
+        border-radius: none;
+        margin: 0;
+    }
+    
+    .col-6, .row, main {
+        margin: 0;
     }
     .cart-info {
         width: 90%;
@@ -410,4 +447,38 @@ img {
         top: 10px;
     }
 
-  }
+    #myTopnav {
+        color: grey;
+        background-color: #fff;
+        position: absolute;
+        display: none;
+        transform: translateZ(30px);
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+        border: 100% solid black;
+      }
+     
+      #myTopnav img {
+          position: relative;
+          top: 30px;
+          left: 30px;
+          cursor: pointer;
+      }
+      #list-group {
+          position: relative;
+          top: 40px;
+          left: 10px;
+      }
+      #list-group {
+          list-style-type: none;
+      }
+      #list-group li {
+          margin: 20px;
+          color: rgb(0, 0, 0);
+      }
+
+
+    }

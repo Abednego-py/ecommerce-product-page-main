@@ -59,6 +59,48 @@ function showInfo() {
     // check()
 }
 
+function menuToggle() {
+    let x = document.getElementById('myTopnav')
+    x.style.display = 'block'
+}
+
+function cancel(){
+    let x = document.getElementById('myTopnav')
+    x.style.display = 'none'
+}
+
+let myImageArray = [
+    'images/image-product-1.jpg',
+    'images/image-product-2.jpg',
+    'images/image-product-3.jpg',
+    'images/image-product-4.jpg'
+]
+let index = 0
+let currentIndex = 0
+let upperLimit = 3
+let lowerLimit = 0
+function previous() {
+    if(currentIndex == 0){
+        prodImg.src = myImageArray[currentIndex]
+    }
+    else if(currentIndex > lowerLimit){
+        prodImg.src = myImageArray[currentIndex]
+        currentIndex--
+    }
+    
+}
+function next(){
+    if(currentIndex == 0){
+        prodImg.src = myImageArray[currentIndex]
+    }
+    else if(currentIndex <= upperLimit && currentIndex > 0){
+        prodImg.src = myImageArray[currentIndex]
+    }
+    if(currentIndex != upperLimit){
+    currentIndex++
+    }
+}
+
 // function menu() {
 //   let new_div = document.createElement('div')
 //   let body = document.querySelector('body')
